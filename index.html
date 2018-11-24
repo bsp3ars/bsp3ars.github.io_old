@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brandon Spears</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <style>
     .parallax {
@@ -38,6 +40,16 @@
 
     .footer {
       padding: 3rem 1.5rem;
+    }
+
+    a.navbar-item.is-active {
+      background-color: rgb(0, 209, 178);
+      color: #fff;
+    }
+
+    a.navbar-item:hover {
+      background-color: #fff;
+      color: #4a4a4a;
     }
 
     .scroll_class section {
@@ -117,9 +129,9 @@
       <nav class="navbar is-fixed-top has-background-primary">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item">
+            <span class="navbar-item">
               <h1 class="is-size-3 has-text-weight-bold is-uppercase" alt="Brandon Spears">bsp3ars</h1>
-            </a>
+            </span>
             <span class="navbar-burger burger" data-target="navbarMenuHeroA">
               <span class="tag"></span>
               <span class="tag"></span>
@@ -128,22 +140,22 @@
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end has-text-weight-bold">
-              <a href="#home" class="navbar-item">
+              <a href="#home" class="navbar-item page is-active">
                 Home
               </a>
-              <a href="#about" class="navbar-item">
+              <a href="#about" class="navbar-item page">
                 About Me
               </a>
-              <a href="#skills" class="navbar-item">
+              <a href="#skills" class="navbar-item page">
                 Skills
               </a>
-              <a href="#education" class="navbar-item">
+              <a href="#education" class="navbar-item page">
                 Education
               </a>
-              <a href="#projects" class="navbar-item">
+              <a href="#projects" class="navbar-item page">
                 Projects
               </a>
-              <a href="#contact" class="navbar-item">
+              <a href="#contact" class="navbar-item page">
                 Contact
               </a>
               <span class="navbar-item is-hidden-touch">
@@ -172,7 +184,7 @@
             A Computer Science Major
           </h2>
         </div>
-        <a href="#about" id="scroll_id" class="scroll_class">
+        <a id="scroll_id" class="scroll_class" onclick="clickAbout()">
           <section>
             <span></span>
           </section>
@@ -181,7 +193,7 @@
     </div>
   </section>
 
-  <div class="section columns is-medium has-text-centered is-vcentered" id="about">
+  <div class="section columns is-medium has-text-centered is-vcentered" id="about" style="margin-top: 12px;">
     <div class="section column is-one-third level is-hidden-touch">
       <span class="icon level-item style-icons">
         <i class="far fa-question-circle"></i>
@@ -448,6 +460,10 @@
   </footer>
 </body>
 <script>
+  function clickAbout() {
+    document.querySelector("a[href='#about']").click();
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
@@ -474,5 +490,6 @@
 
   });
 </script>
+<script src="js/scrollspy.js"></script>
 
 </html>
