@@ -1,99 +1,169 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brandon Spears</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <style>
-      .parallax {
-          /* The image used */
-          background-image: url("photos/bridge.jpg");
-      
-          /* Create the parallax scrolling effect */
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brandon Spears</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <style>
+    .parallax {
+      /* The image used */
+      background-image: url("photos/bridge.jpg");
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .style-icons {
+      display: contents;
+      font-size: 8em;
+      height: 128px;
+      width: 128px;
+    }
+
+    .group-icons {
+      font-size: 4em;
+      height: 64px;
+      width: 64px;
+    }
+
+    .burger {
+      height: auto;
+    }
+
+    .footer {
+      padding: 3rem 1.5rem;
+    }
+
+    .scroll_class section {
+      left: 50%;
+      z-index: 2;
+      display: inline-block;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      color: rgb(0, 209, 178);
+      transition: opacity .3s;
+    }
+
+    a:hover section {
+      opacity: .5;
+    }
+
+    #scroll_id section {
+      height: 100px;
+      margin-top: 25px;
+      width: 100px;
+    }
+
+    #scroll_id section span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 36px;
+      height: 36px;
+      margin-left: -18px;
+      border-left: 3px solid rgb(0, 209, 178);
+      border-bottom: 3px solid rgb(0, 209, 178);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -webkit-animation: scroll_animation 1.5s infinite;
+      animation: scroll_animation 1.5s infinite;
+      box-sizing: border-box;
+    }
+
+    @-webkit-keyframes scroll_animation {
+      0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
       }
 
-      .style-icons  {
-        display: contents;
-        font-size: 8em;
-        height: 128px;
-        width: 128px;
+      50% {
+        opacity: 1;
       }
 
-      .group-icons  {
-        font-size: 4em;
-        height: 64px;
-        width: 64px;
+      100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes scroll_animation {
+      0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
       }
 
-      .burger {
-        height: auto;
+      50% {
+        opacity: 1;
       }
 
-      .footer {
-        padding: 3rem 1.5rem;
+      100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
       }
-      </style>
-  </head>
-  <body>
-    <section class="hero is-fullheight is-bold">
-      <!-- Hero head: will stick at the top -->
-      <div class="hero-head">
-        <nav class="navbar is-fixed-top has-background-primary">
-          <div class="container">
-            <div class="navbar-brand">
-              <a class="navbar-item">
-                <h1 class="is-size-3 has-text-weight-bold is-uppercase" alt="Brandon Spears">bsp3ars</h1>
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero is-fullheight is-bold">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar is-fixed-top has-background-primary">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <h1 class="is-size-3 has-text-weight-bold is-uppercase" alt="Brandon Spears">bsp3ars</h1>
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+              <span class="tag"></span>
+              <span class="tag"></span>
+              <span class="tag"></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end has-text-weight-bold">
+              <a href="#home" class="navbar-item">
+                Home
               </a>
-              <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                <span class="tag"></span>
-                <span class="tag"></span>
-                <span class="tag"></span>
+              <a href="#about" class="navbar-item">
+                About Me
+              </a>
+              <a href="#skills" class="navbar-item">
+                Skills
+              </a>
+              <a href="#education" class="navbar-item">
+                Education
+              </a>
+              <a href="#projects" class="navbar-item">
+                Projects
+              </a>
+              <a href="#contact" class="navbar-item">
+                Contact
+              </a>
+              <span class="navbar-item is-hidden-touch">
+                <a class="button is-primary is-inverted" href="https://github.com/bsp3ars/" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github</span>
+                </a>
               </span>
             </div>
-            <div id="navbarMenuHeroA" class="navbar-menu">
-              <div class="navbar-end has-text-weight-bold">
-                <a href="#home" class="navbar-item">
-                  Home
-                </a>
-                <a href="#about" class="navbar-item">
-                  About Me
-                </a>
-                <a href="#skills" class="navbar-item">
-                  Skills
-                </a>
-                <a href="#education" class="navbar-item">
-                  Education
-                </a>
-                <a href="#projects" class="navbar-item">
-                  Projects
-                </a>
-                <a href="#contact" class="navbar-item">
-                  Contact
-                </a>
-                <span class="navbar-item is-hidden-touch">
-                  <a class="button is-primary is-inverted" href="https://github.com/bsp3ars/" target="_blank" rel="noopener noreferrer">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Github</span>
-                  </a>
-                </span>
-              </div>
-            </div>
           </div>
-        </nav>
-      </div>
-    
-      <!-- Hero content: will be in the middle -->
-      <div class="hero-body parallax columns is-vcentered is-centered" id="home">
-        <div class="column is-one-third has-text-centered">
-          <div class="box">
+        </div>
+      </nav>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body parallax columns is-vcentered is-centered" id="home">
+      <div class="column is-one-third has-text-centered">
+        <div class="box">
           <image src="photos/me.jpg" class="is-square"></image>
           <h1 class="title has-text-primary">
             Brandon Spears
@@ -101,275 +171,284 @@
           <h2 class="subtitle has-text-primary">
             A Computer Science Major
           </h2>
-          </div>
         </div>
+        <a href="#about" id="scroll_id" class="scroll_class">
+          <section>
+            <span></span>
+          </section>
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="section columns is-medium has-text-centered is-vcentered" id="about">
-      <div class="section column is-one-third level is-hidden-touch">
-        <span class="icon level-item style-icons">
-            <i class="far fa-question-circle"></i>
-        </span>
+  <div class="section columns is-medium has-text-centered is-vcentered" id="about">
+    <div class="section column is-one-third level is-hidden-touch">
+      <span class="icon level-item style-icons">
+        <i class="far fa-question-circle"></i>
+      </span>
+    </div>
+
+    <div class="section colunn">
+      <p class="title is-uppercase">About Me</p>
+      <br>
+      <p>
+        My name is Brandon Spears, and I am a Computer Science Major at the University of Cincinnati. While I am not
+        currently looking for a job / co-op, I am open to free lance opportunities and potential co-ops for future
+        terms.
+      </p>
+    </div>
+  </div>
+
+  <div class="section columns is-medium has-background-primary has-text-centered is-vcentered" id="skills">
+    <div class="column is-two-thirds">
+      <p class="title has-text-white is-uppercase">Skills</p>
+      <br>
+      <h3 class="has-text-centered has-text-white has-text-weight-bold is-italic">
+        Proficient Languages
+      </h3>
+      <br>
+      <div class="tags is-centered">
+        <span class="tag">C++</span>
+        <span class="tag">Java</span>
+        <span class="tag">MATLAB</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">Javascript</span>
+        <span class="tag">SQL</span>
       </div>
-
-      <div class="section colunn">
-        <p class="title is-uppercase">About Me</p>
-        <br>
-        <p>
-          My name is Brandon Spears, and I am a Computer Science Major at the University of Cincinnati. While I am not currently looking for a job / co-op, I am open to free lance opportunities and potential co-ops for future terms.
-        </p>
+      <h3 class="has-text-centered has-text-white has-text-weight-bold is-italic">
+        Intermediate Languages
+      </h3>
+      <br>
+      <div class="tags is-centered">
+        <span class="tag">Android Development</span>
+        <span class="tag">PHP</span>
+        <span class="tag">Ruby</span>
+        <span class="tag">ASP.NET</span>
+        <span class="tag">Unity with C#</span>
+      </div>
+      <h3 class="has-text-centered has-text-white has-text-weight-bold is-italic">
+        Other Technical Expertise
+      </h3>
+      <br>
+      <div class="tags is-centered">
+        <span class="tag">Database Design</span>
+        <span class="tag">Flowcharting</span>
+        <span class="tag">Git / GitHub</span>
+        <span class="tag">Microsoft Office Products</span>
+        <span class="tag">Network Fundamentals</span>
+        <span class="tag">Bootstrap</span>
+        <span class="tag">Troubleshooting</span>
+        <span class="tag">Bulma</span>
       </div>
     </div>
 
-    <div class="section columns is-medium has-background-primary has-text-centered is-vcentered" id="skills">
-        <div class="column is-two-thirds">
-          <p class="title has-text-white is-uppercase">Skills</p>
-          <br>
-            <h3 class="has-text-centered has-text-white has-text-weight-bold is-italic">
-              Proficient Languages
-            </h3>
-            <br>
-            <div class="tags is-centered">
-              <span class="tag">C++</span>
-              <span class="tag">Java</span>
-              <span class="tag">MATLAB</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">Javascript</span>
-              <span class="tag">SQL</span>
+    <div class="section column level is-hidden-touch">
+      <span class="icon level-item has-text-white style-icons">
+        <i class="far fa-list-alt"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="section columns is-medium has-text-centered is-vcentered" id="education">
+    <div class="section column is-one-third level is-hidden-touch">
+      <span class="icon level-item style-icons">
+        <i class="fas fa-graduation-cap"></i>
+      </span>
+    </div>
+
+    <div class="section colunn">
+      <p class="title is-uppercase">Education</p>
+      <br>
+      <div class="columns">
+        <div class="card column has-background-primary has-text-white">
+          <div class="card-image">
+            <figure class="image is-square">
+              <img src="photos/uc_logo.jpg" alt="The University of Cincinnati">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              The University of Cincinnati
+              <br>
+              <span class="is-italic">Bachelor of Science in Computer Science</span>
+              <br>
+              Fall 2017 - Spring 2022
             </div>
-            <h3 class="has-text-centered has-text-white has-text-weight-bold is-italic">
-              Intermediate Languages
-            </h3>
-            <br>
-            <div class="tags is-centered">
-              <span class="tag">Android Development</span>
-              <span class="tag">PHP</span>
-              <span class="tag">Ruby</span>
-              <span class="tag">ASP.NET</span>
-              <span class="tag">Unity with C#</span>
-            </div>
-            <h3 class="has-text-centered has-text-white has-text-weight-bold is-italic">
-              Other Technical Expertise
-            </h3>
-            <br>
-            <div class="tags is-centered">
-              <span class="tag">Database Design</span>
-              <span class="tag">Flowcharting</span>
-              <span class="tag">Git / GitHub</span>
-              <span class="tag">Microsoft Office Products</span>
-              <span class="tag">Network Fundamentals</span>
-              <span class="tag">Bootstrap</span>
-              <span class="tag">Troubleshooting</span>
-              <span class="tag">Bulma</span>
-            </div>
+          </div>
         </div>
-  
-        <div class="section column level is-hidden-touch">
-            <span class="icon level-item has-text-white style-icons">
-                <i class="far fa-list-alt"></i>
+        <div class="card column has-background-primary has-text-white">
+          <div class="card-image">
+            <figure class="image is-square">
+              <img src="photos/scc_logo.jpg" alt="Sinclair Community College">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              Sinclair Community College
+              <br>
+              <span class="is-italic">Associates Degree in Software Development</span>
+              <br>
+              Fall 2015 - Summer 2017
+            </div>
+          </div>
+        </div>
+        <div class="card column has-background-primary has-text-white">
+          <div class="card-image">
+            <figure class="image is-square">
+              <img src="photos/mvctc_logo.jpg" alt="Miami Valley Career Technology Center">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              Miami Valley Career Technology Center
+              <br>
+              <span class="is-italic">Game Programming and Web Applications Lab</span>
+              <br>
+              Fall 2015 - Spring 2017
+            </div>
+          </div>
+        </div>
+        <div class="card column has-background-primary has-text-white">
+          <div class="card-image">
+            <figure class="image is-square">
+              <img src="photos/ths_logo.jpg" alt="Tippecanoe High School">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              Tippecanoe High School
+              <br>
+              <span class="is-italic">High School Diploma with Honors</span>
+              <br>
+              Fall 2013 - Spring 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section columns is-medium has-background-primary has-text-centered is-vcentered" id="projects">
+    <div class="column is-two-thirds">
+      <p class="title has-text-white is-uppercase">Projects</p>
+      <br>
+      <div class="columns">
+        <div class="card column">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="photos/bsp3ars.png" alt="bsp3ars.github.io">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <span class="is-italic">bsp3ars.github.io</span>
+              <br>
+              This website is one of my projects, and my first attempt at learning and incorporating the Bulma
+              framework.
+              <br>
+              <a href="bsp3ars.github.io" target="_blank" rel="noopener noreferrer">bsp3ars.github.io</a>
+              <br>
+              <br>
+              <div class="tags is-centered">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Bulma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card column">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="photos/scholar.png" alt="scholar.uc.edu">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <span class="is-italic">Scholar@UC</span>
+              <br>
+              The Scholar@UC website is a website based on Hyrax, which is a front-end based on the robust Samvera
+              framework, providing a user interface for common repository features.
+              <br>
+              <a href="scholar.uc.edu" target="_blank" rel="noopener noreferrer">scholar.uc.edu</a>
+              <br>
+              <br>
+              <div class="tags is-centered">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Javascript</span>
+                <span class="tag">Ruby</span>
+                <span class="tag">Hyrax</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section column level is-hidden-touch">
+      <span class="icon level-item has-text-white style-icons">
+        <i class="fas fa-wrench"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="section columns is-medium has-text-centered is-vcentered" id="contact">
+    <div class="section column">
+      <p class="title is-uppercase">Contact</p>
+      <br>
+      <div class="level">
+        <a href="https://github.com/bsp3ars" target="_blank" rel="noopener noreferrer" class="level-item">
+          <div>
+            <span class="icon group-icons">
+              <i class="fab fa-github"></i>
             </span>
-        </div>
-      </div>
-
-      <div class="section columns is-medium has-text-centered is-vcentered" id="education">
-          <div class="section column is-one-third level is-hidden-touch">
-            <span class="icon level-item style-icons">
-                <i class="fas fa-graduation-cap"></i>
+            <br>
+            <p>github.com/bsp3ars</p>
+          </div>
+        </a>
+        <a href="mailto:bsp3ars@gmail.com" class="level-item">
+          <div>
+            <span class="icon group-icons">
+              <i class="far fa-envelope"></i>
             </span>
-          </div>
-    
-          <div class="section colunn">
-            <p class="title is-uppercase">Education</p>
             <br>
-            <div class="columns">
-              <div class="card column has-background-primary has-text-white">
-                <div class="card-image">
-                  <figure class="image is-square">
-                    <img src="photos/uc_logo.jpg" alt="The University of Cincinnati">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-                    The University of Cincinnati
-                    <br>
-                    <span class="is-italic">Bachelor of Science in Computer Science</span>
-                    <br>
-                    Fall 2017 - Spring 2022
-                  </div>
-                </div>
-              </div>
-              <div class="card column has-background-primary has-text-white">
-                <div class="card-image">
-                  <figure class="image is-square">
-                    <img src="photos/scc_logo.jpg" alt="Sinclair Community College">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-                    Sinclair Community College
-                    <br>
-                    <span class="is-italic">Associates Degree in Software Development</span>
-                    <br>
-                    Fall 2015 - Summer 2017
-                  </div>
-                </div>
-              </div>
-              <div class="card column has-background-primary has-text-white">
-                <div class="card-image">
-                  <figure class="image is-square">
-                    <img src="photos/mvctc_logo.jpg" alt="Miami Valley Career Technology Center">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-                    Miami Valley Career Technology Center
-                    <br>
-                    <span class="is-italic">Game Programming and Web Applications Lab</span>
-                    <br>
-                    Fall 2015 - Spring 2017
-                  </div>
-                </div>
-              </div>
-              <div class="card column has-background-primary has-text-white">
-                <div class="card-image">
-                  <figure class="image is-square">
-                    <img src="photos/ths_logo.jpg" alt="Tippecanoe High School">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-                    Tippecanoe High School
-                    <br>
-                    <span class="is-italic">High School Diploma with Honors</span>
-                    <br>
-                    Fall 2013 - Spring 2017
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p>bsp3ars@gmail.com</p>
           </div>
-        </div>
-
-        <div class="section columns is-medium has-background-primary has-text-centered is-vcentered" id="projects">
-          <div class="column is-two-thirds">
-            <p class="title has-text-white is-uppercase">Projects</p>
+        </a>
+        <a href="files/Spears_Brandon_Resume.pdf" target="_blank" rel="noopener noreferrer" class="level-item">
+          <div>
+            <span class="icon group-icons">
+              <i class="far fa-file"></i>
+            </span>
             <br>
-            <div class="columns">
-              <div class="card column">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="photos/bsp3ars.png" alt="bsp3ars.github.io">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-                    <span class="is-italic">bsp3ars.github.io</span>
-                    <br>
-                    This website is one of my projects, and my first attempt at learning and incorporating the Bulma framework.
-                    <br>
-                    <a href="bsp3ars.github.io" target="_blank" rel="noopener noreferrer">bsp3ars.github.io</a>
-                    <br>
-                    <br>
-                    <div class="tags is-centered">
-                      <span class="tag">HTML</span>
-                      <span class="tag">CSS</span>
-                      <span class="tag">Bulma</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card column">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="photos/scholar.png" alt="scholar.uc.edu">
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div class="content">
-                      <span class="is-italic">Scholar@UC</span>
-                      <br>
-                      The Scholar@UC website is a website based on Hyrax, which is a front-end based on the robust Samvera framework, providing a user interface for common repository features.
-                      <br>
-                      <a href="scholar.uc.edu" target="_blank" rel="noopener noreferrer">scholar.uc.edu</a>
-                      <br>
-                      <br>
-                      <div class="tags is-centered">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">Javascript</span>
-                        <span class="tag">Ruby</span>
-                        <span class="tag">Hyrax</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>  
+            <p>My resume</p>
           </div>
-    
-          <div class="section column level is-hidden-touch">
-              <span class="icon level-item has-text-white style-icons">
-                <i class="fas fa-wrench"></i>
-              </span>
-          </div>
-        </div>
-
-        <div class="section columns is-medium has-text-centered is-vcentered" id="contact">
-          <div class="section column">
-            <p class="title is-uppercase">Contact</p>
+        </a>
+        <a href="tel:937-329-0439" class="level-item">
+          <div>
+            <span class="icon group-icons">
+              <i class="fas fa-phone"></i>
+            </span>
             <br>
-            <div class="level">              
-              <a href="https://github.com/bsp3ars" target="_blank" rel="noopener noreferrer" class="level-item">
-                <div>
-                  <span class="icon group-icons">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <br>
-                  <p>github.com/bsp3ars</p>
-                </div>  
-              </a>  
-              <a href="mailto:bsp3ars@gmail.com" class="level-item">
-                <div>
-                  <span class="icon group-icons">
-                      <i class="far fa-envelope"></i>
-                  </span>
-                  <br>
-                  <p>bsp3ars@gmail.com</p>
-                </div>
-              </a>
-              <a href="files/Spears_Brandon_Resume.pdf" target="_blank" rel="noopener noreferrer" class="level-item">
-                <div>
-                  <span class="icon group-icons">
-                    <i class="far fa-file"></i>
-                  </span>
-                  <br>
-                  <p>My resume</p>
-                </div>  
-              </a>
-              <a href="tel:937-329-0439" class="level-item">
-                <div>
-                  <span class="icon group-icons">
-                    <i class="fas fa-phone"></i>
-                  </span>
-                  <br>
-                  <p>(937) 329 - 0439</p>
-                </div>  
-              </a>
-            </div>
-        </div>
+            <p>(937) 329 - 0439</p>
+          </div>
+        </a>
       </div>
+    </div>
+  </div>
 
-    <footer class="footer has-background-primary has-text-white">
-      <div class="content has-text-centered has-text-weight-bold">
-        <p>
-          Created by Brandon Spears with <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">Bulma</a>
-        </p>
-      </div>
-    </footer>
-  </body>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
+  <footer class="footer has-background-primary has-text-white">
+    <div class="content has-text-centered has-text-weight-bold">
+      <p>
+        Created by Brandon Spears with <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">Bulma</a>
+      </p>
+    </div>
+  </footer>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -378,7 +457,7 @@
     if ($navbarBurgers.length > 0) {
 
       // Add a click event on each of them
-      $navbarBurgers.forEach( el => {
+      $navbarBurgers.forEach(el => {
         el.addEventListener('click', () => {
 
           // Get the target from the "data-target" attribute
@@ -393,6 +472,7 @@
       });
     }
 
-    });
-  </script>
+  });
+</script>
+
 </html>
