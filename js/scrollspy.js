@@ -25,6 +25,7 @@ menuItems.click(function (e) {
         scrollTop: offsetTop
     }, 300);
     e.preventDefault();
+    window.location.toString().split("%23")[0];
 });
 
 // Bind to scroll
