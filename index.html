@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <html>
 
 <head>
@@ -13,7 +13,8 @@
   <meta name="robots" content="index,nofollow">
   <link rel="canonical" href="https://bsp3ars.github.io/">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  <link rel="stylesheet" href="css/styles.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -28,129 +29,7 @@
 
     gtag('config', 'UA-129702662-1');
   </script>
-
-  <style>
-    .parallax {
-      /* The image used */
-      background-image: url("photos/bridge.jpg");
-
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .has-text-white a,
-    .has-text-white a:hover {
-      color: #000;
-      text-decoration: underline;
-    }
-
-    a,
-    a:hover {
-      color: rgb(0, 209, 178);
-    }
-
-    .style-icons {
-      display: contents;
-      font-size: 8em;
-      height: 128px;
-      width: 128px;
-    }
-
-    .group-icons {
-      font-size: 4em;
-      height: 64px;
-      width: 64px;
-    }
-
-    .burger {
-      height: auto;
-    }
-
-    .footer {
-      padding: 3rem 1.5rem;
-    }
-
-    a.navbar-item.is-active {
-      background-color: rgb(0, 209, 178);
-      color: #fff;
-    }
-
-    a.navbar-item:hover {
-      background-color: #fff;
-      color: #4a4a4a;
-    }
-
-    .scroll_class section {
-      left: 50%;
-      z-index: 2;
-      display: inline-block;
-      -webkit-transform: translate(0, -50%);
-      transform: translate(0, -50%);
-      color: rgb(0, 209, 178);
-      transition: opacity .3s;
-    }
-
-    a:hover section {
-      opacity: .5;
-    }
-
-    #scroll_id section {
-      height: 100px;
-      margin-top: 25px;
-      width: 100px;
-    }
-
-    #scroll_id section span {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 36px;
-      height: 36px;
-      margin-left: -18px;
-      border-left: 3px solid rgb(0, 209, 178);
-      border-bottom: 3px solid rgb(0, 209, 178);
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      -webkit-animation: scroll_animation 1.5s infinite;
-      animation: scroll_animation 1.5s infinite;
-      box-sizing: border-box;
-    }
-
-    @-webkit-keyframes scroll_animation {
-      0% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-      }
-
-      50% {
-        opacity: 1;
-      }
-
-      100% {
-        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-      }
-    }
-
-    @keyframes scroll_animation {
-      0% {
-        transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-      }
-
-      50% {
-        opacity: 1;
-      }
-
-      100% {
-        transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-      }
-    }
-  </style>
+  <script src="lazysizes.min.js" async=""></script>
 </head>
 
 <body>
@@ -207,7 +86,7 @@
     <div class="hero-body parallax columns is-vcentered is-centered" id="home">
       <div class="column is-one-third has-text-centered">
         <div class="box">
-          <image src="photos/me.jpg" class="is-square"></image>
+          <img src="photos/me.jpg" alt="Brandon Spears" class="is-square lazyload"></image>
           <h1 class="title has-text-primary">
             Brandon Spears
           </h1>
@@ -307,7 +186,7 @@
         <div class="card column has-background-primary has-text-white">
           <div class="card-image">
             <figure class="image is-square">
-              <img src="photos/uc_logo.jpg" alt="The University of Cincinnati">
+              <img src="photos/uc_logo.jpg" alt="The University of Cincinnati" class="lazyload">
             </figure>
           </div>
           <div class="card-content">
@@ -323,7 +202,7 @@
         <div class="card column has-background-primary has-text-white">
           <div class="card-image">
             <figure class="image is-square">
-              <img src="photos/scc_logo.jpg" alt="Sinclair Community College">
+              <img src="photos/scc_logo.jpg" alt="Sinclair Community College" class="lazyload">
             </figure>
           </div>
           <div class="card-content">
@@ -339,7 +218,7 @@
         <div class="card column has-background-primary has-text-white">
           <div class="card-image">
             <figure class="image is-square">
-              <img src="photos/mvctc_logo.jpg" alt="Miami Valley Career Technology Center">
+              <img src="photos/mvctc_logo.jpg" alt="Miami Valley Career Technology Center" class="lazyload">
             </figure>
           </div>
           <div class="card-content">
@@ -355,7 +234,7 @@
         <div class="card column has-background-primary has-text-white">
           <div class="card-image">
             <figure class="image is-square">
-              <img src="photos/ths_logo.jpg" alt="Tippecanoe High School">
+              <img src="photos/ths_logo.jpg" alt="Tippecanoe High School" class="lazyload">
             </figure>
           </div>
           <div class="card-content">
@@ -380,7 +259,7 @@
         <div class="card column">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="photos/bsp3ars.png" alt="bsp3ars.github.io">
+              <img src="photos/bsp3ars.jpg" alt="bsp3ars.github.io" class="lazyload">
             </figure>
           </div>
           <div class="card-content">
@@ -404,7 +283,7 @@
         <div class="card column">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="photos/scholar.png" alt="scholar.uc.edu">
+              <img src="photos/scholar.jpg" alt="scholar.uc.edu" class="lazyload">
             </figure>
           </div>
           <div class="card-content">
@@ -499,37 +378,7 @@
     </div>
   </footer>
 </body>
-<script>
-  function clickAbout() {
-    document.querySelector("a[href='#about']").click();
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-
-      // Add a click event on each of them
-      $navbarBurgers.forEach(el => {
-        el.addEventListener('click', () => {
-
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-
-        });
-      });
-    }
-
-  });
-</script>
-<script src="js/scrollspy.js"></script>
+<script src="js/mobileNav.min.js"></script>
+<script src="js/scrollspy.min.js"></script>
 
 </html>
